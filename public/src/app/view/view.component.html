@@ -1,0 +1,12 @@
+<h3>Details about {{the_pet.name}}</h3>
+
+<h5>Pet Type: {{the_pet.kind}}</h5>
+<h5>Description: {{the_pet.kind}}</h5>
+<h5>Skills: </h5>
+<p>{{the_pet.skill1}}</p>
+<p>{{the_pet.skill2}}</p>
+<p>{{the_pet.skill3}}</p>
+
+<button [routerLink]="['/']">Home</button>
+<button [routerLink]="['/edit', the_pet._id]">Edit</button>
+<button (click)="deletePet([the_pet._id])">Adopt</button>

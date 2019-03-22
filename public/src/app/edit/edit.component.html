@@ -1,0 +1,26 @@
+<h3>Need to update your pet?</h3>
+<button (click)="goHome()">Home</button>
+<br>
+
+<form (submit)="editPet()">
+  <p>Name: </p>
+  <input type="text" name="updatedPet.name" required minlength="3" [(ngModel)]="updatedPet.name" #name=ngModel>
+  {{name.errors | json}}
+  {{name.valid | json}}
+  <p>Type: </p>
+  <input type="text" name="updatedPet.kind" required minlength="3" [(ngModel)]="updatedPet.kind" #kind=ngModel>
+  {{kind.errors | json}}
+  {{kind.valid | json}}
+  <p>Description: </p>
+  <input type="text" name="updatedPet.description" required minlength="3" [(ngModel)]="updatedPet.description" #desc=ngModel>
+  {{desc.errors | json}}
+  {{desc.valid | json}}
+  <p>Skills: </p>
+  <input type="text" name="updatedPet.skill1" [(ngModel)]="updatedPet.skill1">
+  <br>
+  <input type="text" name="updatedPet.skill2" [(ngModel)]="updatedPet.skill2">
+  <br>
+  <input type="text" name="updatedPet.skill3" [(ngModel)]="updatedPet.skill3">
+  <button>Submit</button>
+  <button (click)="goToView()">Cancel</button>
+</form>

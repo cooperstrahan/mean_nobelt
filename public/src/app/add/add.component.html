@@ -1,0 +1,21 @@
+<h3>Know of a pet needing a home?</h3>
+<button (click)="goHome()">Home</button>
+<br>
+
+<form (submit)="addNewPet()" novalidate>
+  <p>Name: </p>
+  <input type="text" name="newPet.name" [(ngModel)]="newPet.name">
+  <p>Type: </p>
+  <input type="text" name="newPet.kind" [(ngModel)]="newPet.kind">
+  <p>Description: </p>
+  <input type="text" name="newPet.description" [(ngModel)]="newPet.description">
+  <p>Skills: </p>
+  <input type="text" name="newPet.skill1" [(ngModel)]="newPet.skill1">
+  <br>
+  <input type="text" name="newPet.skill2" [(ngModel)]="newPet.skill2">
+  <br>
+  <input type="text" name="newPet.skill3" [(ngModel)]="newPet.skill3">
+  <br>
+  <button>Submit</button>
+  
+</form>
